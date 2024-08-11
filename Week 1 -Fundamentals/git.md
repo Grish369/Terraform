@@ -8,7 +8,7 @@ Steps:
 6- git push
 
 Staging
-untracked ----<git add .>-----staged --------------Tracked
+untracked ----<git add .>-----staged ----<git commit >  local commits ---<git push> -------Tracked by Git
 
 untracked-> even it is not saved in your local system profiel
 staged 
