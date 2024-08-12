@@ -3,13 +3,13 @@ https://developer.hashicorp.com/terraform/language
 
 ########################################################################################################
 
-**# Installation:**
+# Installation:
 https://developer.hashicorp.com/terraform/install
 open environment variable -> user variable path -> add the terraform.exe path to "PATH" variable
 
 ########################################################################################################
 
-**# Version:**
+# Version:
 PS C:\..\Terraform> terraform --version
 Terraform v1.9.4
 on windows_386
@@ -18,7 +18,7 @@ on windows_386
 ########################################################################################################
 
 
-**# terraform:**
+# terraform:
 Usage: terraform [global options] <subcommand> [args]
 
 The available commands for execution are listed below.
@@ -50,7 +50,7 @@ Global options (use these before the subcommand, if any):
 ########################################################################################################
 
 
-**# Workspace:**
+# Workspace:
 Usage: terraform [global options] workspace
 
   new, list, show, select and delete Terraform workspaces.
