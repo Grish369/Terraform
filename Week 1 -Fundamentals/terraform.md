@@ -50,8 +50,8 @@ Usage: terraform [global options] workspace
 Subcommands:
     delete    Delete a workspace
     list      List Workspaces
-    new       Create a new workspace
-    select    Select a workspace
+    new       Create a new workspace and also switch to that workspace
+    select    Switch to that workspace
     show      Show the name of the current workspace
 
 Isolated State: Since the workspace is new and empty, there is no existing state to reference. This means Terraform will treat all resources in your configuration as new and will attempt to create them when you run terraform apply.
@@ -59,3 +59,6 @@ Isolated State: Since the workspace is new and empty, there is no existing state
 No Conflicts: Because the workspace is isolated, changes made in this workspace will not affect resources in other workspaces. This is useful in scenarios like managing different environments (e.g., dev, staging, prod) where you want to keep their infrastructure separate.
 
 Plan and Apply: When you run terraform plan, Terraform will generate a plan based on the configuration files and show you what changes it intends to make, but since there is no existing state, everything will appear as new. When you run terraform apply, Terraform will create all the resources as described in your configuration.
+
+
+* whenever new workspace is created using terraform workspace new <name_of the workspace> -> it create 2 new folders -> with .terraform (it will have one environment file which state the name of the current working workspace ) and terfform.tfstate.d ( it create the folder with the respective workspace name which include tfstate respectively)
