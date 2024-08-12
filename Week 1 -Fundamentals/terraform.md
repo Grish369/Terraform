@@ -1,18 +1,24 @@
 https://developer.hashicorp.com/terraform/language
 
 
+########################################################################################################
 
-# Installation:
+**# Installation:**
 https://developer.hashicorp.com/terraform/install
 open environment variable -> user variable path -> add the terraform.exe path to "PATH" variable
 
+########################################################################################################
 
-# Version:
+**# Version:**
 PS C:\..\Terraform> terraform --version
 Terraform v1.9.4
 on windows_386
 
-# terrform:
+
+########################################################################################################
+
+
+**# terraform:**
 Usage: terraform [global options] <subcommand> [args]
 
 The available commands for execution are listed below.
@@ -41,8 +47,10 @@ Global options (use these before the subcommand, if any):
                 given subcommand.
   -help         Show this help output, or the help for a specified subcommand.        -version      An alias for the "version" subcommand.
 
+########################################################################################################
 
-# Workspace:
+
+**# Workspace:**
 Usage: terraform [global options] workspace
 
   new, list, show, select and delete Terraform workspaces.
@@ -61,4 +69,16 @@ No Conflicts: Because the workspace is isolated, changes made in this workspace 
 Plan and Apply: When you run terraform plan, Terraform will generate a plan based on the configuration files and show you what changes it intends to make, but since there is no existing state, everything will appear as new. When you run terraform apply, Terraform will create all the resources as described in your configuration.
 
 
-* whenever new workspace is created using terraform workspace new <name_of the workspace> -> it create 2 new folders -> with .terraform (it will have one environment file which state the name of the current working workspace ) and terfform.tfstate.d ( it create the folder with the respective workspace name which include tfstate respectively)
+$${\color{Orange}**whenever new workspace is created using terraform workspace new <name_of the workspace> -> it create 2 new folders -> with .terraform (it will have one environment file which state the name of the current working workspace ) and terraform.tfstate.d ( it create the folder with the respective workspace name which include tfstate respectively) **}$$
+
+
+```
+.terraform
+ > environment
+terraform.tfstate.d
+ >dev
+ >test
+```
+
+
+########################################################################################################
