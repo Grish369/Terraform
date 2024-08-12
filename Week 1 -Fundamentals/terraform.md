@@ -1,13 +1,13 @@
 https://developer.hashicorp.com/terraform/language
 
 
-########################################################################################################
+
 
 # Installation:
 https://developer.hashicorp.com/terraform/install
 open environment variable -> user variable path -> add the terraform.exe path to "PATH" variable
 
-########################################################################################################
+
 
 # Version:
 PS C:\..\Terraform> terraform --version
@@ -15,7 +15,7 @@ Terraform v1.9.4
 on windows_386
 
 
-########################################################################################################
+
 
 
 # terraform:
@@ -47,7 +47,7 @@ Global options (use these before the subcommand, if any):
                 given subcommand.
   -help         Show this help output, or the help for a specified subcommand.        -version      An alias for the "version" subcommand.
 
-########################################################################################################
+
 
 
 # Workspace:
@@ -81,4 +81,4 @@ terraform.tfstate.d
 ```
 
 
-########################################################################################################
+
