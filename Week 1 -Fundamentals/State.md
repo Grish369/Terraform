@@ -1,14 +1,14 @@
 
 # Import
 
-> [!IMPORTANT]
+> [!NOTE]
 > Terraform supports bringing your existing infrastructure under its management. By importing resources into Terraform, you can consistently manage your infrastructure using a common workflow.
 
 
 
 
 Example:
-1- Create a configuration file `#ffffff` (.tf ) within your terraform folder.
+1- Create a configuration file (.tf ) within your terraform folder.
 
 2- Write resource block (just give resource address which we need to add inside it can be empty bez post initialize it will get auto popped) which you going to add
 
