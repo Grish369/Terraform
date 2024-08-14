@@ -21,12 +21,14 @@ terraform.tfstate.d
 # Terraform init
 > + terraform init [options]
 >+ The following options apply to all of (or several of) the initialization steps:
-     ```markdown -input=true ``` Ask for input if necessary. If false, will error if input was required.
-     
-     ```markdown -lock=false``` Disable locking of state files during state-related operations.
-     
-     ```markdown -lock-timeout=<duration> ``` Override the time Terraform will wait to acquire a state lock. The default is 0s (zero seconds), which causes immediate failure if the lock is already held by another process.
 
-     ```markdown -no-color ``` Disable color codes in the command output.
 
-     ```markdown -upgrade Opt ``` to upgrade modules and plugins as part of their respective installation steps. See the sections below for more details
+     ``` -input=true ``` Ask for input if necessary. If false, will error if input was required.
+     
+     ``` -lock=false``` Disable locking of state files during state-related operations.
+     
+     ``` -lock-timeout=<duration> ``` Override the time Terraform will wait to acquire a state lock. The default is 0s (zero seconds), which causes immediate failure if the lock is already held by another process.
+
+     ``` -no-color ``` Disable color codes in the command output.
+
+     ``` -upgrade Opt ``` to upgrade modules and plugins as part of their respective installation steps. See the sections below for more details
