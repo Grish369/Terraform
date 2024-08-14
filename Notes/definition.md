@@ -19,7 +19,8 @@ terraform.tfstate.d
 ```
 
 # Terraform init
-> + terraform init [options]
+>+ terraform init [options]
+>+ create .terraform and terraform.lock.hcl folder and file.
 >+ The following options apply to all of (or several of) the initialization steps:
 
 
@@ -32,3 +33,22 @@ terraform.tfstate.d
      ``` -no-color ``` Disable color codes in the command output.
 
      ``` -upgrade Opt ``` to upgrade modules and plugins as part of their respective installation steps. See the sections below for more details
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+> https://developer.hashicorp.com/terraform/language
