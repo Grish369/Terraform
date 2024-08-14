@@ -62,12 +62,15 @@ resource "resourceprovider_resourcetype" "name to call the resource within terra
 # 3- Provisioner 
 > ek feature hai jo resources create hone ke baad ya destroy hone se pehle kuch additional tasks perform karne ke liye use kiya jata hai. Yeh tasks typically server configuration, scripts run karne, ya specific commands execute karne ke liye hote hain.
  ### Type of Provisioners:
+
  >  + local-exec-> Yeh provisioner local machine pe commands run karta hai jaha se aap terraform apply command execute kar rahe ho.
+
       provisioner "local-exec" {
         command = "echo 'Server created!'"
         }
 
  >  + remote-exec-> Yeh provisioner remote machine (like a VM) pe commands run karta hai. Aapko SSH ya WinRM connection setup karna padta hai.
+
          provisioner "remote-exec" {
           inline = [
              "sudo apt-get update",
@@ -76,6 +79,7 @@ resource "resourceprovider_resourcetype" "name to call the resource within terra
           }
 
  >  + file -> Yeh provisioner files ko local machine se remote server pe copy karta hai.
+ 
         > provisioner "file" {
            source      = "path/to/local/file"
             destination = "/path/on/remote/server/file"
