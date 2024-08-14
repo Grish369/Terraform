@@ -5,7 +5,7 @@
 > The resource type and name must be unique within a module because they serve as an identifier for a given resource.
 
 
-    ```
+    
 resource "resourceprovider_resourcetype" "name to call the resource within terraform" {
   #configuration arguments 
 }
@@ -32,15 +32,15 @@ resource "resourceprovider_resourcetype" "name to call the resource within terra
 
     2- Remove the resource block from your configuration and replace it with a removed block: (resource will be removed from the Terraform state, but the real infrastructure object will not be destroyed.)
 
-```json
-removed {
-  from = aws_instance.example
+    ```j
+    removed {
+      from = aws_instance.example
 
-  lifecycle {
-    destroy = false
-  }
-}
-```
+    lifecycle {
+       destroy = false
+       }
+      }
+      ```
 > A value of false means that Terraform will remove the resource from state without destroying it.
 
 
