@@ -68,9 +68,9 @@ less common or more advanced commands.
 
 >[!TIP]
 > whenever new workspace is created using " terraform workspace new <name_of the workspace>"
-  + it create new folders 
-    + with .terraform (it will have one environment file which state the name of the current working workspace ) 
-    + terraform.tfstate.d ( it create the folders with the respective workspaces name which include tfstate for each workspace respectively)
+  > + it create new folders 
+  > + with .terraform (it will have one environment file which state the name of the current working workspace ) 
+  > + terraform.tfstate.d ( it create the folders with the respective workspaces name which include tfstate for each workspace respectively)
 
 
 ```
