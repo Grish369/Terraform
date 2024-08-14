@@ -8,7 +8,7 @@
 
 > + State data
 >   + Default local backend/ default workspace -> terraform.tfstate file
->   + If directory uses multiple workspace -> terraform.tfstate.d directory within that created workspace folder
+>   + If directory uses multiple workspace -> terraform.tfstate.d directory within that it created workspace named folder having their own tfstate file.
  
 ```
 .terraform
@@ -17,3 +17,16 @@ terraform.tfstate.d
  >dev
  >test
 ```
+
+# Terraform init
+> + terraform init [options]
+>+ The following options apply to all of (or several of) the initialization steps:
+     ```markdown -input=true ``` Ask for input if necessary. If false, will error if input was required.
+     
+     ```markdown -lock=false``` Disable locking of state files during state-related operations.
+     
+     ```markdown -lock-timeout=<duration> ``` Override the time Terraform will wait to acquire a state lock. The default is 0s (zero seconds), which causes immediate failure if the lock is already held by another process.
+
+     ```markdown -no-color ``` Disable color codes in the command output.
+
+     ```markdown -upgrade Opt ``` to upgrade modules and plugins as part of their respective installation steps. See the sections below for more details
