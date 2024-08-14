@@ -67,7 +67,10 @@ less common or more advanced commands.
 > Plan and Apply: When you run terraform plan, Terraform will generate a plan based on the configuration files and show you what changes it intends to make, but since there is no existing state, everything will appear as new. When you run terraform apply, Terraform will create all the resources as described in your configuration.
 
 >[!TIP]
-> whenever new workspace is created using terraform workspace new <name_of the workspace> -> it create 2 new folders -> with .terraform (it will have one environment file which state the name of the current working workspace ) and terraform.tfstate.d ( it create the folder with the respective workspace name which include tfstate respectively)
+> whenever new workspace is created using " terraform workspace new <name_of the workspace>"
+  + it create new folders 
+    + with .terraform (it will have one environment file which state the name of the current working workspace ) 
+    + terraform.tfstate.d ( it create the folders with the respective workspaces name which include tfstate for each workspace respectively)
 
 
 ```
