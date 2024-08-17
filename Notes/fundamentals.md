@@ -86,7 +86,7 @@ resource "aws_db_instance" "example" {
 
 ######
 ### Resource Behaviour
-####How Terraform Applies a Configuration?
+#### How Terraform Applies a Configuration?
 <em>
 1. Create resources that exist in the configuration but are not associated with a real infrastructure object in the state.
 2. Destroy resources that exist in the state but no longer exist in the configuration.
@@ -102,9 +102,11 @@ resource "aws_db_instance" "example" {
 #### Accessing Resource Attributes
 <em>
 1- Expression ( whenever you want to access resource attribute use the follow syntax )
-    <p align="center" style="font-size:16px;" > RESOURCE TYPE.NAME.ATTRIBUTE  </p>
+    <p align="center" style="font-size:16px;" > RESOURCE TYPE.NAME.ATTRIBUTE  </p></br> 
+
 2- Read only attribute (attribute which we get to know only after the terraform apply command is runned) </br>
     this often includes things that can't be known until the resource is created, like the resource's unique random ID.
+</br>
 
 3- Data source (Data sources are a type of resource used to retrieve information from external sources or existing resources that are not managed by Terraform. They allow you to access and use this information in your Terraform configuration.)
 </em>
@@ -124,10 +126,24 @@ output "latest_ami_id" {
   value = data.aws_ami.latest_amazon_linux.id
 }
 ```
+#### Local-only Resources
+<em>
+>Local Values: Fixed and internal. They are defined within the configuration and used only within that module.</br>
+>Variables: Flexible and can accept external input. They allow users or external sources to provide values, enabling changes to the configuration.
+</em>
 
+```bash
+locals {
+  instance_type = "t2.micro"
+}
 
-
-
+resource "aws_instance" "example" {
+  instance_type = local.instance_type
+  ami           = "ami-123456"
+}
+```
+<p align="center" style="font-size:16px;" ><em> The behavior of local-only resources is the same as all other resources, but their result data exists only within the Terraform state. "Destroying" such a resource means only to remove it from the state, discarding its data. 
+</em></p>
 
 ### Meta Arguments
 * depends_on
@@ -135,6 +151,14 @@ output "latest_ami_id" {
 * count
 * provider
 * lifecycle
+
+
+
+
+
+
+
+
 ### Provisioner
 * Declaring Provisioners
 * Provisioner Connections
