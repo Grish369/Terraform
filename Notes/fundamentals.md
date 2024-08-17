@@ -10,8 +10,6 @@ SYNTAX :-
  arguments
 }
 ```
-</br>
- Here., <resources_type> -> <provider>_<type> </br>
 
 example=></br>
 ```bash
@@ -28,7 +26,8 @@ instance_type = "t2.micro"
 <p align="center" style="font-size:16px;">
 <em>In the scenario which declare that a resource was removed from Terraform configuration but that its managed object should not be destroyed, remove the resource block from your configuration and replace it with a removed block:</em>
 </p>
-<br>
+</br>
+
 ```bash
 removed {
 from = aws_instance.example
@@ -37,7 +36,14 @@ lifecycle {
  }
  }
 ```
+<p align="center" style="font-size:16px;"> 
+The <strong> from </strong> argument is the address of the resource you want to remove, without any instance keys (such as "aws_instance.example[1]"). </br>
 
+The <strong > lifecycle </strong> block is required.  </br>
+
+The <strong> destroy </strong> argument determines whether Terraform will attempt to destroy the object managed by the resource or not. 
+    A value of false means that Terraform will remove the resource from state without destroying it.
+ </p>
 
 
 
