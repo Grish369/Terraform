@@ -145,7 +145,7 @@ resource "aws_instance" "example" {
 <p align="center" style="font-size:16px;" ><em> The behavior of local-only resources is the same as all other resources, but their result data exists only within the Terraform state. "Destroying" such a resource means only to remove it from the state, discarding its data.
 </em>  </p>
 
-<p style="color:blue">Make this text blue.</p>
+
 
 ### Meta Arguments
 * depends_on
