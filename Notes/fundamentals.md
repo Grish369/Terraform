@@ -6,20 +6,21 @@
 
 SYNTAX :-
 
-```json
+```bash
  resources "resource_type" "resource_name" {
  arguments
 }
 ```
-> <em> Here., <resources_type> ->  <provider>_<type> </em>
+> <em> Here., <resources_type> -> 
+ <provider>_<type> </em>
 
 example=>
 
 ```bash
 resource "aws_instance" "web" {
-                 ami           = "ami-a1b2c3d4"
-                 instance_type = "t2.micro"
-                }
+ami           = "ami-a1b2c3d4"
+instance_type = "t2.micro"
+ }
 ```
     
 #### Removing Resources
@@ -34,8 +35,8 @@ resource "aws_instance" "web" {
 
 ```bash
 removed {
-  from = aws_instance.example
- lifecycle {
+from = aws_instance.example
+lifecycle {
   destroy = false
  }
  }
