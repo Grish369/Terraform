@@ -37,20 +37,35 @@ lifecycle {
  }
 ```
 
-> <em> The <strong> from </strong> argument is the address of the resource you want to remove, without any instance keys (such as "aws_instance.example[1]"). </br>
-
-> The <strong > lifecycle </strong> block is required.  </br>
-
-> The <strong> destroy </strong> argument determines whether Terraform will attempt to destroy the object managed by the resource or not. </br>
-    >  A value of false means that Terraform will remove the resource from state without destroying it.
-
+> <em> The  ' from ' argument is the address of the resource you want to remove, <u> without any instance keys (such as "aws_instance.example[1]"). </u></br>
+> The  ' lifecycle'  block is required.  </br>
+> The ' destroy ' argument determines whether Terraform will attempt to destroy the object managed by the resource or not. </br>
+> A value of false means that Terraform will remove the resource from state without destroying it.
 </em>
 
+####  Custom Condition Checks
 
 
+<em> You can use precondition and postcondition blocks to specify assumptions and guarantees about how the resource operates. The following example creates a precondition that checks whether the AMI is properly configured.</em> </br>
+
+>  custom condition checks in Terraform ->  improve configuration clarity and provide early /post error detection.
 
 
+```bash
+resource "aws_instance" "example" {
+  instance_type = "t2.micro"
+  ami           = "ami-abc123"
 
+  lifecycle {
+    # The AMI ID must refer to an AMI that contains an operating system
+    # for the `x86_64` architecture.
+    precondition {
+      condition     = data.aws_ami.example.architecture == "x86_64"
+      error_message = "The selected AMI must be for the x86_64 architecture."
+    }
+  }
+}
+```
 
 
 ### Resource Behaviour
