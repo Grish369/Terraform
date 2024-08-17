@@ -15,7 +15,7 @@ SYNTAX :-
 
 example=>
 
-```json
+```bash
 resource "aws_instance" "web" {
                  ami           = "ami-a1b2c3d4"
                  instance_type = "t2.micro"
@@ -32,9 +32,9 @@ resource "aws_instance" "web" {
 <br>
     
 
-```json
+```bash
 removed {
- from = aws_instance.example
+  from = aws_instance.example
  lifecycle {
   destroy = false
  }
