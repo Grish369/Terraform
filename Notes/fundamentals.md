@@ -151,7 +151,7 @@ resource "aws_instance" "example" {
 * count
 * provider
 * lifecycle
-
+<span style="color: red;">This text is red.</span>
 
 
 
