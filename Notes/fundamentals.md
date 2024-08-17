@@ -142,8 +142,8 @@ resource "aws_instance" "example" {
   ami           = "ami-123456"
 }
 ```
-<p align="center" style="font-size:16px;" ><span style="color: green;"><em> The behavior of local-only resources is the same as all other resources, but their result data exists only within the Terraform state. "Destroying" such a resource means only to remove it from the state, discarding its data. </spam>
-</em></p>
+<p align="center" style="font-size:16px;" ><span style="color: green;"><em> The behavior of local-only resources is the same as all other resources, but their result data exists only within the Terraform state. "Destroying" such a resource means only to remove it from the state, discarding its data.
+</em> </span> </p>
 
 ### Meta Arguments
 * depends_on
