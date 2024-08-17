@@ -68,8 +68,8 @@ resource "aws_instance" "example" {
 ```
 #### Operation Timeouts
 
-1. <em> Most resource types do not support the timeouts block at all.</em></br>
-2.<em> Some resource types provide a special timeouts nested block argument that allows you to customize how long certain operations are allowed to take before being considered to have failed. </em></br>
+* <em> Most resource types do not support the timeouts block at all.</em></br>
+* <em> Some resource types provide a special timeouts nested block argument that allows you to customize how long certain operations are allowed to take before being considered to have failed. </em></br>
 
 <p align="center" style="font-size:16px;" > For example, aws_db_instance allows configurable timeouts for create, update, and delete operations. </p>
 
@@ -84,17 +84,48 @@ resource "aws_db_instance" "example" {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
+######
 ### Resource Behaviour
+####How Terraform Applies a Configuration?
+<em>
+1. Create resources that exist in the configuration but are not associated with a real infrastructure object in the state.
+2. Destroy resources that exist in the state but no longer exist in the configuration.
+3. Update in-place resources whose arguments have changed.
+4. Destroy and re-create resources whose arguments have changed but which cannot be updated in-place due to remote API limitations.
+
+#### Remote API Limitations:
+>Some changes cannot be applied in place due to limitations or constraints of the remote API. </br>
+>   Example: In AWS, changing the instance type of an EC2 instance might not be possible without recreating the instance due to API constraints or the nature of the resource.
+
+</em>
+
+#### Accessing Resource Attributes
+<em>
+1- Expression ( whenever you want to access resource attribute use the follow syntax )
+    <p align="center" style="font-size:16px;" > RESOURCE TYPE.NAME.ATTRIBUTE  </p>
+2- Read only attribute (attribute which we get to know only after the terraform apply command is runned) </br>
+    this often includes things that can't be known until the resource is created, like the resource's unique random ID.
+
+3- Data source (Data sources are a type of resource used to retrieve information from external sources or existing resources that are not managed by Terraform. They allow you to access and use this information in your Terraform configuration.)
+</em>
+
+```bash
+data "aws_ami" "latest_amazon_linux" {
+  most_recent = true
+  owners      = ["amazon"]
+}
+
+resource "aws_instance" "example" {
+  ami           = data.aws_ami.latest_amazon_linux.id
+  instance_type = "t2.micro"
+}
+
+output "latest_ami_id" {
+  value = data.aws_ami.latest_amazon_linux.id
+}
+```
+
+
 
 
 
