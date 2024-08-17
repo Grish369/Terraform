@@ -151,7 +151,13 @@ resource "aws_instance" "example" {
 * count
 * provider
 * lifecycle
-<span style="color: red;">This text is red.</span>
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
 
 
