@@ -12,7 +12,7 @@ SYNTAX :-
  arguments
 }
 ```
->Here., <resources_type>= <provider>_<type>
+>Here., <resources_type> =  <provider>_<type>
 
 example=>
 
@@ -25,10 +25,15 @@ resource "aws_instance" "web" {
     
 #### Removing Resources
 > To remove a resource from Terraform, simply delete the resource block from your Terraform configuration.
+ <br>
+ 
+>By default, after you remove the resource block, Terraform will plan to destroy any real infrastructure object managed by that resource.
 
-> By default, after you remove the resource block, Terraform will plan to destroy any real infrastructure object managed by that resource.
-
-    In this scenario to declare that a resource was removed from Terraform configuration but that its managed object should not be destroyed, remove the resource block from your configuration and replace it with a removed block:
+<p align="center" style="font-size:16px;">
+  <em>In this scenario to declare that a resource was removed from Terraform configuration but that its managed object should not be destroyed, remove the resource block from your configuration and replace it with a removed block:</em>
+</p>
+<br>
+    
 
 ```json
 removed {
