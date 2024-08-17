@@ -36,14 +36,15 @@ lifecycle {
  }
  }
 ```
-<p align="center" style="font-size:16px;"> 
-The <strong> from </strong> argument is the address of the resource you want to remove, without any instance keys (such as "aws_instance.example[1]"). </br>
 
-The <strong > lifecycle </strong> block is required.  </br>
+> <em> The <strong> from </strong> argument is the address of the resource you want to remove, without any instance keys (such as "aws_instance.example[1]"). </br>
 
-The <strong> destroy </strong> argument determines whether Terraform will attempt to destroy the object managed by the resource or not. 
-    A value of false means that Terraform will remove the resource from state without destroying it.
- </p>
+> The <strong > lifecycle </strong> block is required.  </br>
+
+> The <strong> destroy </strong> argument determines whether Terraform will attempt to destroy the object managed by the resource or not. </br>
+    >  A value of false means that Terraform will remove the resource from state without destroying it.
+
+</em>
 
 
 
