@@ -5,10 +5,13 @@
 > The resource type and name must be unique within a module because they serve as an identifier for a given resource.
 
 
-    
+###
+ 
+```json
 resource "resourceprovider_resourcetype" "name to call the resource within terraform" {
   #configuration arguments 
 }
+```
 
 
 
