@@ -37,7 +37,7 @@ lifecycle {
  }
 ```
 
-> <em> The  **from**  argument is the address of the resource you want to remove, <u> without any instance keys (such as "aws_instance.example[1]"). </u></br>
+> <em> The  **from**  argument is the address of the resource you want to remove,  without any instance keys (such as "aws_instance.example[1]"). </br>
 > The  **lifecycle**  block is required.  </br>
 > The **destroy** argument determines whether Terraform will attempt to destroy the object managed by the resource or not. </br>
 > A value of false means that Terraform will remove the resource from state without destroying it.
@@ -66,6 +66,32 @@ resource "aws_instance" "example" {
   }
 }
 ```
+#### Operation Timeouts
+
+1. <em> Most resource types do not support the timeouts block at all.</em></br>
+2.<em> Some resource types provide a special timeouts nested block argument that allows you to customize how long certain operations are allowed to take before being considered to have failed. </em></br>
+
+<p align="center" style="font-size:16px;" > For example, aws_db_instance allows configurable timeouts for create, update, and delete operations. </p>
+
+```bash 
+resource "aws_db_instance" "example" {
+  # ...
+
+  timeouts {
+    create = "60m"
+    delete = "2h"
+  }
+}
+```
+
+
+
+
+
+
+
+
+
 
 
 ### Resource Behaviour
