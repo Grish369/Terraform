@@ -119,7 +119,11 @@
 >[!NOTE]
 >that outputs with the sensitive attribute will be redacted
 
-
+   3. Terraform state
+      + Terraform state list (list all the reources)
+         local_file.example
+         local_file.example2
+         local_file.example3
 
 
 </em>
