@@ -16,7 +16,16 @@
        1- Type " terraform login "  
        2- This will redirect to Terraform cloud website ( login there ) 
        3- Successful login, Terraform generate API token for the connection with CLI 
-       4-
+       4- Success! Terraform has obtained and saved an API token.
+
+       ```bash
+       The token will be stored in plaintext in the following file:
+       /home/username/.terraform.d/credentials.tfrc.json
+
+       If you'd like to cancel this process, press Ctrl+C now.
+       Otherwise, press Enter to continue.
+       ```
+       > Token are saved in credentials.tfrc.json file .
  
 
 
