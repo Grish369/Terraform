@@ -75,10 +75,10 @@
 ## Inspecting Infrastructure.
 
    1. terraform graph
-      + terraform graph ->Graphical way of representing the resource and data block from your configuration file
-      > digraph G {
-             rankdir = "RL";
-             node [shape = rect, fontname = "sans-serif"];
+      + terraform graph ->Graphical way of representing the resource and data block from your configuration file</br>
+      > digraph G {</br>
+             rankdir = "RL"; </br>
+             node [shape = rect, fontname = "sans-serif"];</br>
              "local_file.example" [label="local_file.example"]; </br>
       + terraform graph -type=plan | dot -Tpng > graph.png
 
