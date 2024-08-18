@@ -53,7 +53,7 @@
 </br>
 
 ## Writing and modifying Code
-      1. Console
+   1. Console
       > mandatory to run terraform apply before using this command</br>
       >The terraform console reflects the current state of your infrastructure as stored in the state file.  If you add or modify a resource in your configuration files, this change is not part of the Terraform state until it is applied
 
