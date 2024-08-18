@@ -77,13 +77,47 @@
    1. terraform graph
       + terraform graph ->Graphical way of representing the resource and data block from your configuration file</br>
        ```bash
-            digraph G {
-             rankdir = "RL"; 
-             node [shape = rect, fontname = "sans-serif"];
-             "local_file.example" [label="local_file.example"]; 
+           digraph G {
+            rankdir = "RL";
+            node [shape = rect, fontname = "sans-serif"];
+            "local_file.example" [label="local_file.example"];
+             "local_file.example2" [label="local_file.example2"];
+               }
        ```
-   + terraform graph -type=plan | dot -Tpng > graph.png
+       + terraform graph -type=plan | dot -Tpng > graph.png </br>
 
+   2. terraform output
+      + Usage:  terraform output [options] [NAME]</br>
+      + what ? The terraform output command displays the values of output variables defined in your Terraform configuration.</br>
+      + Why? It helps extract, validate, and use key information from your infrastructure.</br>
+ Example: In configuration file
+ ```bash
+  output "instance_ips" {
+   value = aws_instance.web.*.public_ip
+       }
+
+   output "lb_address" {
+   value = aws_alb.web.public_dns
+ }
+ output "password" {
+  sensitive = true
+  value = var.secret_password
+ }
+ ```
+ In CLI
+```bash
+ > terraform output
+ $ terraform output
+ instance_ips = [
+  "54.43.114.12",
+  "52.122.13.4",
+  "52.4.116.53"
+ ]
+ lb_address = "my-app-alb-1657023003.us-east-1.elb.amazonaws.com"
+ password = <sensitive>
+```
+>[!NOTE]
+>that outputs with the sensitive attribute will be redacted:
 
 
 
