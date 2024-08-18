@@ -117,7 +117,7 @@
  password = <sensitive>
 ```
 >[!NOTE]
->that outputs with the sensitive attribute will be redacted:
+>that outputs with the sensitive attribute will be redacted
 
 
 
