@@ -27,11 +27,11 @@
        ```
        </br>
 
-    *Usage: terraform login [hostname]
+   *Usage: terraform login [hostname]
       If you don't provide an explicit hostname, Terraform will assume you want to log in to HCP Terraform at app.terraform.io.
 
        > Token are saved in credentials.tfrc.json file .
-       
+
  </br></br>
    2. logout (terraform logout)
    
