@@ -56,6 +56,14 @@
    1. Console
       > mandatory to run terraform apply before using this command</br>
       >The terraform console reflects the current state of your infrastructure as stored in the state file.  If you add or modify a resource in your configuration files, this change is not part of the Terraform state until it is applied
+   2. fmt
+      > The terraform fmt command formats your Terraform configuration files to ensure they adhere to a consistent style. </br>
+      >terraform fmt -check   -> To check if files are formatted correctly without making changes </br>
+      >terraform fmt -recursive   ->This formats all .tf files in the current directory and any subdirectories.</br>
+
+
+
+
 
 
 </em>
