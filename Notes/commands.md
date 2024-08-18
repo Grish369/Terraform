@@ -12,11 +12,11 @@
    * How?
       Run terraform login to authenticate via the default Terraform Cloud, or terraform login [hostname] for a custom host, which redirects you to a browser for authentication.
 
-      * Steps?
-      1- Type " terraform login "  </br>
-      2- This will redirect to Terraform cloud website ( login there ) </br>
-      3- Successful login, Terraform generate API token for the connection with CLI </br>
-      4-
+      * Steps? </br>
+       1- Type " terraform login "  
+       2- This will redirect to Terraform cloud website ( login there ) 
+       3- Successful login, Terraform generate API token for the connection with CLI 
+       4-
  
 
 
