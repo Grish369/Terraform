@@ -57,20 +57,20 @@
       > mandatory to run terraform apply before using this command</br>
       >The terraform console reflects the current state of your infrastructure as stored in the state file.  If you add or modify a resource in your configuration files, this change is not part of the Terraform state until it is applied
 
-    2. fmt
+   2. fmt
       > The terraform fmt command formats your Terraform configuration files to ensure they adhere to a consistent style. </br>
       >terraform fmt -check   -> To check if files are formatted correctly without making changes </br>
       >terraform fmt -recursive   ->This formats all .tf files in the current directory and any subdirectories.</br>
       > terraform fmt path/to/file.tf    ->  To format a specific file or directory 
 
-    3.Validate
+   3.Validate
       > What: terraform validate checks your Terraform configuration for syntax errors and logical issues.</br>
       > Why: Ensures that your configuration is syntactically correct and that all references and resources are valid before applying changes.</br>
       > How: Run terraform validate in your project directory to validate the configuration.</br>
       >* Usage: terraform validate [options]</br>
-     > This command accepts the following options:</br>
-     >  json - Produce output in a machine-readable JSON format, suitable for use in text editor integrations and other automated systems. Always disables color.</br>
-     > -no-color - If specified, output won't contain any color.</br>
+      > This command accepts the following options:</br>
+      >  json - Produce output in a machine-readable JSON format, suitable for use in text editor integrations and other automated systems. Always disables color.</br>
+      > -no-color - If specified, output won't contain any color.</br>
 
 ## Inspecting Infrastructure.
 
