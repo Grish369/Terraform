@@ -14,9 +14,9 @@
 
       * Steps? </br>
        1- Type " terraform login "  
-       2- This will redirect to Terraform cloud website ( login there ) 
-       3- Successful login, Terraform generate API token for the connection with CLI 
-       4- Success! Terraform has obtained and saved an API token.
+       2- This will redirect to Terraform cloud website ( login there ) </br>
+       3- Successful login, Terraform generate API token for the connection with CLI </br>
+       4- Success! Terraform has obtained and saved an API token.</br>
 
        ```bash
        The token will be stored in plaintext in the following file:
