@@ -189,5 +189,22 @@ $ terraform state show 'packet_device.worker'
 
    + Run  terraform plan command to  verify
 
+Optional: </br>
+-config=PATH: Specifies the directory of the configuration file.</br>
+-input=false: Disables interactive prompts.</br>
+-lock=false: Disables state file locking.</br>
+-lock-timeout=TIMEOUT: Sets the wait time for acquiring a lock.</br>
+-no-color: Removes colors from the output.</br>
+-parallelism=N: Specifies the number of parallel operations.</br>
+-state=STATE_PATH: Specifies the path to the state file.</br>
+-state-out=STATE_PATH: Saves the state file to a new location.</br>
+
+>[!TIP]
+>The terraform import CLI command can only import resources into the state. Importing via the CLI does not generate configuration. If you want to generate the accompanying configuration for imported resources, use the import block instead.
+
+
+
+
+
 
 </em>
