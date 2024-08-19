@@ -181,13 +181,13 @@ $ terraform state show 'packet_device.worker'
          }
 ```
 
-    +  Run terraform import command where you need to specify resource ID which you are going to import .
+     +  Run terraform import command where you need to specify resource ID which you are going to import .
     
 ``` bash
       terraform import aws_instance.example i-1234567890abcdef0
 ```
 
-    + Run  terraform plan command to  verify
+     + Run  terraform plan command to  verify
 
 
 </em>
