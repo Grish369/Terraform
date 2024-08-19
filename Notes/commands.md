@@ -176,17 +176,17 @@ $ terraform state show 'packet_device.worker'
       +  First write the resource block in configuration file which resource you want to deploy with terraform.
 
      ```bash
- resource "aws_instance" "example" {
+        resource "aws_instance" "example" {
          # configuration matching the existing instance
          }
-    ```
+      ```
+
     +  Run terraform import command where you need to specify resource ID which you are going to import .
     
-     ```bash
+     ``` bash
       terraform import aws_instance.example i-1234567890abcdef0
-      
       ```
-      + Run  terraform plan command to  verify
+    + Run  terraform plan command to  verify
 
 
 </em>
