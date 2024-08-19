@@ -120,10 +120,47 @@
 >that outputs with the sensitive attribute will be redacted
 
    3. Terraform state
-      + Terraform state list (list all the reources)
-         local_file.example
-         local_file.example2
-         local_file.example3
+      + Terraform state list (list all the reources)</br>
+            local_file.example
+            local_file.example2
+            local_file.example3
+      + terraform state list [options] [address...]
+
+Example: Filtering by Resource</br>
+```bash
+$ terraform state list aws_instance.bar
+aws_instance.bar[0]
+aws_instance.bar[1]
+```
+
+Example: Filtering by Module </br>
+```bash
+$ terraform state list module.elb
+module.elb.aws_elb.main
+module.elb.module.secgroups.aws_security_group.sg
+```
+
+Example: Filtering by ID</br>
+```bash
+$ terraform state list -id=sg-1234abcd
+module.elb.aws_security_group.sg
+```
 
 
+   + Terraform state show
+       + terraform state show - show the attributes of a single resource in the Terraform state. 
+       + Example
+
+         ```bash 
+$ terraform state show 'packet_device.worker'
+            # packet_device.worker:
+                  resource "packet_device" "worker" {
+                   billing_cycle = "hourly"
+                      created       = "2015-12-17T00:06:56Z"
+                   facility      = "ewr1"
+                     hostname      = "prod-xyz01"
+                      id            = "6015bg2b-b8c4-4925-aad2-f0671d5d3b13"
+                       locked        = false
+                   }
+       ```
 </em>
