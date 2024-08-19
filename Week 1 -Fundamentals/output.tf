@@ -1,6 +1,6 @@
 
 provider "local" {
-      alias = "output"
+  alias = "output"
 }
 resource "local_file" "example3" {
   filename = "${path.module}/example3.txt"
@@ -10,6 +10,6 @@ resource "local_file" "example3" {
 
 
 output "example3" {
-    # sensitive =true
+  # sensitive =true
   value = local_file.example3.content
 }

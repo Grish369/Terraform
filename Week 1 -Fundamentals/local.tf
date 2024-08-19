@@ -1,5 +1,5 @@
 provider "local" {
-    alias = "provider"
+  alias = "provider"
 }
 
 resource "local_file" "example" {
