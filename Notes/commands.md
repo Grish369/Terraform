@@ -170,10 +170,10 @@ $ terraform state show 'packet_device.worker'
 
 ## Importing infrastructure
 
-   -  Import command
+   1 -  Import command
    To import the pre-existing infrastructure with Terraform
    Steps:
-      +  First write the resource block in configuration file which resource you want to deploy with terraform.
+   +  First write the resource block in configuration file which resource you want to deploy with terraform.
 
 ```bash
         resource "aws_instance" "example" {
