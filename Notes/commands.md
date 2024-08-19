@@ -151,7 +151,8 @@ module.elb.aws_security_group.sg
        + terraform state show - show the attributes of a single resource in the Terraform state. 
        + Example
 
-         ```bash 
+       
+```bash 
 $ terraform state show 'packet_device.worker'
             # packet_device.worker:
                   resource "packet_device" "worker" {
@@ -162,5 +163,6 @@ $ terraform state show 'packet_device.worker'
                       id            = "6015bg2b-b8c4-4925-aad2-f0671d5d3b13"
                        locked        = false
                    }
-       ```
+```
+       
 </em>
